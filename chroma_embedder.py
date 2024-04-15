@@ -17,7 +17,7 @@ with open("data.csv") as f:
     reader = csv.DictReader(f)
     data = list(reader)
 
-documents = [item["title"] for item in data]
+documents = [item["excerpt"] for item in data]
 ids = [str(i) for i in range(len(documents))]
 
 if len(documents) != len(data) or len(documents) != len(ids):

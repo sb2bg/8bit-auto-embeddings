@@ -3,6 +3,8 @@ import csv
 from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
 
 client = chromadb.PersistentClient(path="chroma.db")
+
+# specify the embedding function to use
 embedder = SentenceTransformerEmbeddingFunction(
     model_name="thenlper/gte-small",
     # specify the device to use, e.g. "cuda" or "cpu"
